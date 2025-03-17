@@ -32,7 +32,7 @@ Knight Game is my first project built with Godot Engine v4.3. This game follows 
 
 1. Clone the repository
    ```
-   git clone https://github.com/yourusername/Knight-Game.git
+   git clone https://github.com/sirpratama/Knight-Game.git
    ```
 
 2. Open the project in Godot Engine
