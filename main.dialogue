@@ -1,0 +1,63 @@
+~ main
+if global.goblin_quest_accepted == true and global.goblin_quest_completed == false
+	Parker: Have you cleared out those goblins yet? Our village is counting on you!
+	- I'm still working on it.
+	Parker: Please hurry! The raids are getting worse. Remember, their camp is near the eastern ruins.
+	=> END
+	- How many did I need to kill again?
+	Parker: Our scouts counted at least 5 of them.
+	Parker: They're all hiding in the eastern ruins. Clear them ALL out, and the reward is yours.
+	=> END
+	- I need better equipment first.
+	Parker: *looks worried* I understand, but please don't take too long. 
+	Parker: Every day more villagers lose their livelihoods to these raids.
+	=> END
+elif global.goblin_quest_accepted == false
+	Parker: Thank goodness someone's here! We've got a serious goblin problem.
+	- Not interested. => END
+	- Tell me more about these goblins.
+		Parker: They've been raiding our village for weeks now. Stealing food, terrorizing farmers.
+		Parker: Their camp is somewhere in the eastern forest. We've counted at least a dozen of them.
+		Parker: If someone doesn't clear them out soon, I fear they'll grow bold enough to attack the village directly.
+	- What's in it for me?
+		Parker: *sighs* Straight to business, eh? Fair enough.
+		Parker: The village has pooled will considered you as a hero.
+		=> offer_quest
+elif global.goblin_quest_completed == true
+	Parker: Our hero returns! The village has been peaceful since you cleared out those goblins.
+	Parker: The farmers can work without fear, and children play outside again. We are forever in your debt.
+	- I'm glad I could help.
+	Parker: Your bravery won't be forgotten.
+	=> END
+
+~ offer_quest
+Parker: So, will you help us clear out these goblins?
+- I accept the quest.
+	Parker: Thank you! Our scouts last saw them near the old ruins east of here.
+	Parker: Be careful - they wield a fiery staff. Not many have faced them and lived to tell about it.
+	Parker: Return to me when all the goblins have been dealt with. The village is counting on you!
+	set global.goblin_quest_accepted = true
+	=> END
+- How many goblins are there exactly?
+	Parker: Our scouts counted at least 5.
+	Parker: Clear them all out, and the eastern forest will be safe again.
+	=> offer_quest
+- I need better payment.
+	Parker: *frowns* We're simple folk, but... *thinks for a moment*
+	Parker: I suppose I could also offer a statue made for you. You will be remembered forever.
+	=> final_decision
+- I need to prepare first.
+	Parker: Of course, these goblins are dangerous. Come back when you're ready.
+	Parker: But please hurry - every day they grow bolder with their raids.
+	=> END
+
+~ final_decision
+Parker: Do we have a deal then?
+- Yes, I'll clear out ALL the goblins.
+	Parker: I hope you returns safe!
+	set global.goblin_quest_accepted = true
+	=> END
+- No, it's still not worth it.
+	Parker: I understand. These are dangerous times.
+	Parker: If you change your mind, you know where to find me.
+	=> END

@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://c8uoi1u0j8274"]
+
+[ext_resource type="Texture2D" uid="uid://6xwa2lq06738" path="res://assets/Factions/Knights/Troops/Pawn/Blue/Pawn_Blue.png" id="2_bchrj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hol6r"]
+atlas = ExtResource("2_bchrj")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xl3r"]
+atlas = ExtResource("2_bchrj")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d03et"]
+atlas = ExtResource("2_bchrj")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uaqy0"]
+atlas = ExtResource("2_bchrj")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbyk2"]
+atlas = ExtResource("2_bchrj")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw53v"]
+atlas = ExtResource("2_bchrj")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ejjbi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hol6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xl3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d03et")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uaqy0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbyk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gw53v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gcp0c"]
+radius = 18.2483
+
+[node name="npc" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ejjbi")
+autoplay = "default"
+frame_progress = 0.199646
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 4)
+shape = SubResource("CircleShape2D_gcp0c")

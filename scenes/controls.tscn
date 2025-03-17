@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://cny0sl8livrxt"]
+
+[ext_resource type="Texture2D" uid="uid://dghr38jskp4ow" path="res://assets/keyboard-button.png" id="1_dgapx"]
+[ext_resource type="Texture2D" uid="uid://b5phatoop3sd7" path="res://assets/buttons.png" id="2_tppg8"]
+[ext_resource type="Texture2D" uid="uid://yxener0i0vln" path="res://assets/letter-e.png" id="3_qa470"]
+[ext_resource type="Texture2D" uid="uid://dhmwhx21pmv6t" path="res://assets/letter-q.png" id="4_63c2v"]
+
+[node name="Controls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 216.0
+offset_right = 551.0
+offset_bottom = 728.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_dgapx")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 216.0
+offset_right = 859.0
+offset_bottom = 728.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_tppg8")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 246.0
+offset_right = 710.0
+offset_bottom = 758.0
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("3_qa470")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 245.0
+offset_right = 540.0
+offset_bottom = 757.0
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("4_63c2v")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 138.0
+offset_right = 476.0
+offset_bottom = 221.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+text = "CONTROLS"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 438.0
+offset_right = 211.0
+offset_bottom = 480.0
+theme_override_font_sizes/font_size = 30
+text = "WASD"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 434.0
+offset_right = 568.0
+offset_bottom = 476.0
+theme_override_font_sizes/font_size = 30
+text = "ARROW Keys"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 233.0
+offset_right = 291.0
+offset_bottom = 261.0
+theme_override_font_sizes/font_size = 20
+text = "ATTACK"
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 228.0
+offset_right = 137.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 20
+text = "NPC Quest"

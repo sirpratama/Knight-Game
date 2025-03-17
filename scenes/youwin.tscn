@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcll0j8cmxilc"]
+
+[ext_resource type="Texture2D" uid="uid://beuif0mwsxel7" path="res://assets/UI/Ribbons/Ribbon_Blue_3Slides.png" id="1_4mekn"]
+
+[node name="youwin" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 689.0
+offset_bottom = 239.0
+texture = ExtResource("1_4mekn")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 52.0
+offset_right = 477.0
+offset_bottom = 135.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "YOU WIN"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -196.0
+offset_top = -243.0
+offset_right = 903.0
+offset_bottom = 461.0

@@ -1,0 +1,97 @@
+[gd_scene load_steps=14 format=3 uid="uid://cmuxl2y0ajja5"]
+
+[ext_resource type="Texture2D" uid="uid://tyc3lbkrlo8f" path="res://assets/Pixel Potion Pack - FINISHED/Small Vial/BLUE/Small Vial - BLUE - Spritesheet.png" id="1_08x6g"]
+[ext_resource type="Script" path="res://scripts/buffpotion.gd" id="1_nbodq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwyma"]
+atlas = ExtResource("1_08x6g")
+region = Rect2(0, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hl3l"]
+atlas = ExtResource("1_08x6g")
+region = Rect2(14, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5kjh"]
+atlas = ExtResource("1_08x6g")
+region = Rect2(28, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccfjy"]
+atlas = ExtResource("1_08x6g")
+region = Rect2(42, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb8kv"]
+atlas = ExtResource("1_08x6g")
+region = Rect2(56, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxc1l"]
+atlas = ExtResource("1_08x6g")
+region = Rect2(70, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7whn"]
+atlas = ExtResource("1_08x6g")
+region = Rect2(84, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r00bm"]
+atlas = ExtResource("1_08x6g")
+region = Rect2(98, 0, 14, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dssv"]
+atlas = ExtResource("1_08x6g")
+region = Rect2(112, 0, 14, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2p0n4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwyma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hl3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5kjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccfjy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb8kv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxc1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7whn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r00bm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dssv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oyi7f"]
+radius = 21.0238
+
+[node name="buffpotion" type="Area2D"]
+z_index = 3
+collision_mask = 2
+script = ExtResource("1_nbodq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(15.5, 24.25)
+scale = Vector2(3.21429, 3.02083)
+sprite_frames = SubResource("SpriteFrames_2p0n4")
+autoplay = "default"
+frame = 4
+frame_progress = 0.308595
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 39)
+shape = SubResource("CircleShape2D_oyi7f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
